@@ -9,23 +9,24 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.tomcatContext.util.JdbcUtil;
 
 /**
- * <p>ClassName: JNDITestServlet<p>
- * <p>Description: <p>
- * <p>Company:广州利迪网络科技有限公司 <p>    
- * @author xudp
- * @version 1.0 V
- * @createTime 2014-10-23 上午09:32:52
+ * 
+ * @author may
+ *
  */
 public class JNDITestServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+	private static final long serialVersionUID = -4221534764133676917L;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         //Oracle数据库连接

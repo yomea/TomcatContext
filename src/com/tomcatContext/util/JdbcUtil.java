@@ -13,6 +13,11 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import com.alibaba.druid.pool.DruidDataSource;
 
+/**
+ * JNDI数据源获取助手
+ * @author may
+ *
+ */
 public class JdbcUtil {
     
 /*
@@ -70,7 +75,7 @@ public class JdbcUtil {
     /**
      * MethodName: getOracleConnection
      * Description: 获取Oracle数据库连接
-     * @author xudp        
+     * @author may        
      * @return
      * @throws SQLException
      */
@@ -81,7 +86,7 @@ public class JdbcUtil {
     /**
      * MethodName: getMySqlConnection
      * Description: 获取MySQL数据库连接
-     * @author xudp        
+     * @author may        
      * @return
      * @throws SQLException
      */
@@ -90,9 +95,7 @@ public class JdbcUtil {
     }
     
     /**
-     * MethodName: getSqlServerConnection
-     * Description: 获取SQLServer数据库连接
-     * @author xudp        
+     * 获取SQL server的链接
      * @return
      * @throws SQLException
      */
@@ -100,16 +103,12 @@ public class JdbcUtil {
         return dsSqlServer.getConnection();
     }
 
-    /**
-    * @Method: release
-    * @Description: 释放资源，
-    *     要释放的资源包括Connection数据库连接对象，负责执行SQL命令的Statement对象，存储查询结果的ResultSet对象
-    * @Anthor:孤傲苍狼
-    *
+   /**
+    * 释放资源
     * @param conn
     * @param st
     * @param rs
-    */ 
+    */
     public static void release(Connection conn,Statement st,ResultSet rs){
         if(rs!=null){
             try{

@@ -68,7 +68,7 @@
         factory="com.alibaba.druid.pool.DruidDataSourceFactory"
         auth="Container"
         type="javax.sql.DataSource"
-        driverClassName="com.mysql.jdbc.Driver"
+        driverClassName="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://192.168.1.233:3306/lead_oams?useUnicode=true&amp;characterEncoding=utf-8"
         username="lead_system"
         password="password"
